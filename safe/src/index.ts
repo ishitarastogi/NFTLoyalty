@@ -50,9 +50,7 @@ async function relayTransaction() {
 
   const safeTransactionData: MetaTransactionData = {
     to: targetAddress,
-    data: nftContract.interface.encodeFunctionData("earnPoints", [
-      "0x0eaE0194784851Bf3515E3B6be3Cf7EC29268B8D",
-      "3",
+    data: nftContract.interface.encodeFunctionData("redeemNFT", ["1"]),
     ]),
     value: "0",
     operation: OperationType.Call,

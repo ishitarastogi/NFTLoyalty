@@ -14,18 +14,18 @@ import {
 import ContractInfo from "../ABI.json";
 
 const RPC_URL =
-  "https://eth-goerli.g.alchemy.com/v2/L2rvt62zDN4AaOBQwK2OmyUj2-BWD1n0";
+  "https://eth-goerli.g.alchemy.com/v2/procces.env.ALCHEMY_KEY";
 
 const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
 const signer = new ethers.Wallet(
-  "27204a09afee7649efcb2d0d7f23eca1013d9a9127f1d97af20fbf5ea4d56709",
+  "procces.env.PRIIVATE_KEY",
   provider
 );
 
 const safeAddress = "0x11FF6f9b62C88c33029caDcCE9646A2A34dF1388";
 const chainId = 5;
 const targetAddress = ContractInfo.address;
-const GELATO_RELAY_API_KEY = "jX8Df3AGdD968yf8gBe4CjyXdelu3qJVDAZSHgrNd0A_";
+const GELATO_RELAY_API_KEY = "process.env.GELATO_RELAY_API_KEY";
 const nftContract = new ethers.Contract(
   targetAddress,
   ContractInfo.abi,
